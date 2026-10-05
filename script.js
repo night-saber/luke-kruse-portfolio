@@ -192,6 +192,26 @@ const PROJECTS = [
     tags: ["Java", "Paper", "Combat", "Plugin"],
     repo: "https://github.com/night-saber/dual-wield-anything",
   },
+  {
+    name: "EssenceOfDoom",
+    assisted: true,
+    icon: "\u2620\ufe0f", category: "Games", year: "2026",
+    blurb: "A Minecraft RPG built on He Who Fights With Monsters: gather dark, sin and blood essences, awaken abilities from 16 stone types, and fuse all three into the Doom confluence. 57 abilities across passives, auras, actives, familiars and utilities.",
+    body: "You gather essences, you find awakening stones, and the combination decides what you become. Dark, sin and blood each unlock different powers from the same stone, and holding all three opens the Doom confluence - which is its own thing entirely. Sixteen awakening stones each teach every essence, so a stone is never wasted: bring one essence and awaken one ability, bring all three and you walk away with three powers plus Doom itself. The 57 abilities span twelve passives (lifesteal, executioner strikes, shadow meld), five auras that debuff everything nearby, eighteen actives from a blood pact that trades health for healing to a chain of damnation that arcs between enemies, six familiars that are real mobs fighting beside you, and sixteen permanent utilities. Everything is data-driven from a single JSON file with build-time validation, and the resource pack draws 77 icons procedurally - four essence vials, sixteen faceted crystals and a token for every ability.",
+    highlights: [
+      "Dark, sin and blood essences, each unlocking different powers from the same stone",
+      "The Doom confluence - fuse all three and it awakens as its own ability",
+      "16 awakening stones, each covering all four essences across five ability kinds",
+      "57 abilities: 12 passives, 5 auras, 18 actives, 6 familiars, 16 utilities",
+      "18 distinct active payloads - dashes, blinks, novas, siphons, storms, marks, executes",
+      "Familiars are real mobs using vanilla AI: they path, fight, follow and never despawn",
+      "Passives use real attribute modifiers with stable keys, so they never stack or leak",
+      "Fully data-driven from one JSON file, validated at build time so no stone can be wasted",
+      "77 resource-pack textures drawn procedurally - no source art",
+    ],
+    tags: ["Java", "Paper", "RPG", "Resource pack"],
+    repo: "https://github.com/night-saber/essence-of-doom",
+  },
 ];
 
 const INTERESTS = [
