@@ -3,17 +3,19 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Luke Kruse — Developer &amp; Creator</title>
-<meta name="description" content="Luke Kruse — builder of Minecraft plugins, mods, games and web apps. Portfolio of Java, Skript, Godot, Unity and full-stack projects." />
+<title>Luke Kruse — Developer, Educator &amp; Creator</title>
+<meta name="description" content="Luke Kruse — educator and developer building Minecraft plugins, mods, games and web apps. Math, jiu jitsu, and code." />
 <meta name="author" content="Luke Kruse" />
-<meta property="og:title" content="Luke Kruse — Developer & Creator" />
-<meta property="og:description" content="Minecraft plugins, mods, games and web apps." />
+<meta name="theme-color" content="#07080c" />
+<meta property="og:title" content="Luke Kruse — Developer, Educator & Creator" />
+<meta property="og:description" content="Minecraft plugins, mods, games and web apps — built by hand." />
 <meta property="og:type" content="website" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 <a class="skip" href="#work">Skip to work</a>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
@@ -22,51 +24,64 @@
       <span class="brand-text">Luke Kruse</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="#journey">Journey</a>
-      <a href="#about">About</a>
-      <a href="#stack">Stack</a>
-      <a href="#contact">Contact</a>
+      <a href="#work" data-nav>Work</a>
+      <a href="#journey" data-nav>Journey</a>
+      <a href="#interests" data-nav>Interests</a>
+      <a href="#stack" data-nav>Stack</a>
+      <a href="#about" data-nav>About</a>
     </nav>
-    <a class="btn btn-ghost nav-cta" href="https://github.com/lukekruse" target="_blank" rel="noopener">GitHub</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+      <span class="tt-icon">◐</span>
+    </button>
+    <a class="btn btn-ghost nav-cta" href="https://github.com/night-saber" target="_blank" rel="noopener">GitHub</a>
   </div>
 </header>
 
 <main id="top">
 
   <section class="hero">
+    <canvas id="particles" aria-hidden="true"></canvas>
     <div class="wrap hero-inner">
-      <p class="eyebrow">Developer · Game Systems · Tools</p>
-      <h1 class="hero-title">
-        I build worlds, <span class="grad">weapons</span>, and the tools that make them.
+      <p class="eyebrow reveal">Developer · Educator · Builder</p>
+      <h1 class="hero-title reveal">
+        I build worlds, <span class="grad">systems</span>, and the tools that make them fun.
       </h1>
-      <p class="hero-sub">
+      <p class="hero-sub reveal">
         Minecraft plugins and mods, custom resource packs, Godot and Unity games, and full-stack
-        web apps. Everything here I designed, coded, and shipped myself.
+        web apps — plus a lifelong love of <strong>math</strong>, <strong>jiu jitsu</strong> and
+        <strong>video games</strong>.
       </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#work">See the work</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      <div class="hero-actions reveal">
+        <a class="btn btn-primary" href="#work">Explore the work</a>
+        <a class="btn btn-ghost" href="#journey">How I got here</a>
       </div>
       <ul class="hero-stats" id="heroStats"></ul>
     </div>
     <div class="hero-glow" aria-hidden="true"></div>
+    <a class="scroll-hint" href="#work" aria-label="Scroll down"><span></span></a>
   </section>
 
   <section class="section" id="work">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Selected work</h2>
-        <p>Filter by what you want to see. Every card is a real project from my machine.</p>
+        <p>Every project here was designed, coded and shipped by me. Click a card for details.</p>
       </div>
-      <div class="filters" id="filters" role="tablist" aria-label="Filter projects"></div>
+      <div class="work-controls reveal">
+        <div class="filters" id="filters" role="tablist" aria-label="Filter projects"></div>
+        <label class="search">
+          <span aria-hidden="true">⌕</span>
+          <input type="search" id="search" placeholder="Search projects…" aria-label="Search projects" />
+        </label>
+      </div>
       <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>No projects match that search.</p>
     </div>
   </section>
 
-  <section class="section" id="journey">
+  <section class="section section-alt" id="journey">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>How I got here</h2>
         <p>From Khan Academy sketches to multi-agent worlds — before AI, and with it.</p>
       </div>
@@ -74,35 +89,19 @@
     </div>
   </section>
 
-  <section class="section section-alt" id="about">
-    <div class="wrap about">
-      <div class="about-copy">
-        <h2>About</h2>
-        <p>
-          I'm Luke — an educator and builder from Oklahoma who spends his time making things work:
-          classrooms by day, code by night. I like systems that are deep enough to be interesting
-          and polished enough that other people actually want to use them.
-        </p>
-        <p>
-          Most of my work lives in the Minecraft ecosystem — Java plugins on Paper, Fabric mods,
-          Skript systems, and custom resource packs with hand-built 3D models. Outside of that I
-          build games in Godot and Unity, and web apps that run entirely on your own machine.
-        </p>
-        <p>
-          I care about the details: a weapon that <em>feels</em> different, a GUI that reads clearly,
-          a build that actually compiles and runs.
-        </p>
+  <section class="section" id="interests">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Beyond the keyboard</h2>
+        <p>The things that keep me sharp — on the mat, on the page, and on the screen.</p>
       </div>
-      <aside class="about-card">
-        <h3>At a glance</h3>
-        <ul class="facts" id="facts"></ul>
-      </aside>
+      <div class="interests" id="interests"></div>
     </div>
   </section>
 
-  <section class="section" id="stack">
+  <section class="section section-alt" id="stack">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Stack &amp; tools</h2>
         <p>What I reach for, grouped by what it's for.</p>
       </div>
@@ -110,16 +109,43 @@
     </div>
   </section>
 
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div class="about-copy reveal">
+        <h2>About</h2>
+        <p>
+          I'm Luke — an educator and builder from Oklahoma. I've spent years in classrooms and on
+          the mat, and I bring the same approach to code: break the problem down, drill the
+          fundamentals, then build something that actually works.
+        </p>
+        <p>
+          Most of my work lives in the Minecraft ecosystem — Java plugins on Paper, Fabric mods,
+          Skript systems, and custom resource packs with hand-built 3D models. Outside of that I
+          build games in Godot and Unity, and web apps that run entirely on your own machine.
+        </p>
+        <p>
+          Math is the through-line. Whether it's attack-speed curves, drop rates, or a voice-cloning
+          pipeline, the interesting part is almost always the model underneath.
+        </p>
+      </div>
+      <aside class="about-card reveal">
+        <h3>At a glance</h3>
+        <ul class="facts" id="facts"></ul>
+      </aside>
+    </div>
+  </section>
+
   <section class="section section-alt" id="contact">
-    <div class="wrap contact">
+    <div class="wrap contact reveal">
       <h2>Let's build something</h2>
       <p class="contact-sub">
         Open to collaborations, commissions, and questions about any project here.
       </p>
       <div class="contact-actions">
-        <a class="btn btn-primary" href="https://github.com/lukekruse" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" href="mailto:hello@lukehitchkruse.com">Email</a>
+        <a class="btn btn-primary" href="https://github.com/night-saber" target="_blank" rel="noopener">GitHub</a>
+        <button class="btn btn-ghost" id="copyEmail" data-email="lukehitchkruse@gmail.com">Copy email</button>
       </div>
+      <p class="copied" id="copied" hidden>Copied to clipboard ✓</p>
     </div>
   </section>
 
@@ -128,9 +154,28 @@
 <footer class="footer">
   <div class="wrap footer-inner">
     <span>© <span id="year"></span> Luke Kruse</span>
-    <span class="footer-dim">Built by hand — HTML, CSS, JS.</span>
+    <span class="footer-dim">Built by hand — HTML, CSS &amp; JS. No frameworks.</span>
   </div>
 </footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" data-close aria-label="Close">×</button>
+    <div class="modal-head">
+      <span class="modal-icon" id="modalIcon"></span>
+      <div>
+        <h3 id="modalTitle"></h3>
+        <span class="modal-meta" id="modalMeta"></span>
+      </div>
+    </div>
+    <p class="modal-body" id="modalBody"></p>
+    <div class="modal-highlights" id="modalHighlights"></div>
+    <div class="chips" id="modalTags"></div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
