@@ -48,6 +48,46 @@ const TIMELINE = [
 ];
 
 const PROJECTS = [
+  /* --------------------------------------------------------------- web apps */
+  {
+    name: "Verde — landscaping app for owners and gardeners",
+    icon: "🌿", category: "Web app", year: "2026", featured: true,
+    era: "now",
+    blurb: "A two-sided web app that connects land owners with gardeners. Owners photograph the exact thing they want changed and pin it to a map; workers get a job list with the photo, the instruction and the location.",
+    body: "Landscaping jobs go wrong in a predictable way: the owner describes what they want in words, the worker pictures something different, and the disagreement only shows up once the work is done. Verde fixes that by making the request itself visual and located. Land owners add properties, post change requests with a photo of the problem, write what they want instead, and drop a pin on the exact spot. Workers see every property assigned to them, work through a task list, and upload completion photos as proof. The whole app runs with no backend and no build step — accounts, properties, tasks and photos live in the browser, with photos downscaled and JPEG-compressed to about 8 KB each so a full job history fits in local storage. The map is Leaflet with OpenStreetMap tiles (free, no API key) showing properties as pins, tasks as colour-coded circles by priority, and photos as tappable markers. Every account picks a primary language at signup from 17 options, and user-written content is translated automatically — so an English-speaking owner and a Spanish-speaking gardener each write in their own language and read the other in theirs.",
+    highlights: [
+      "Two account types — land owner and gardener/worker — with separate views and permissions",
+      "Photo change requests: owners photograph the problem and describe the change they want",
+      "Live Leaflet + OpenStreetMap map with property pins, priority-coloured task markers and photo markers",
+      "Tap the map to drop a pin, or use device geolocation to locate a property or task",
+      "Automatic translation of user-written content across 17 languages via the free MyMemory API",
+      "Task workflow Open → In progress → Done, with priorities, comments and completion photos",
+      "Client-side photo compression — images downscaled to ~8 KB so a whole job history fits in local storage",
+      "No backend, no build step, no API keys — a single static site with SHA-256 hashed passwords",
+    ],
+    tags: ["JavaScript", "Leaflet", "OpenStreetMap", "i18n", "Web app"],
+    link: "https://night-saber.github.io/verde-landscaping/",
+    repo: "https://github.com/night-saber/verde-landscaping",
+  },
+  {
+    name: "Aetherfall — browser action RPG",
+    icon: "⚔", category: "Game", year: "2026", featured: true,
+    era: "now",
+    blurb: "A complete action RPG in the browser: five classes with their own abilities, a procedurally generated world, twelve quests, four dungeons and four bosses. Every sprite, sound and line of code written from scratch — no engine, no assets, no dependencies.",
+    body: "Aetherfall is a full action RPG that runs in a browser tab. There are five playable classes — Warden, Runeblade, Pyromancer, Druid and Shadowblade — each with four distinct abilities on cooldowns. The world is generated procedurally at 2600×2600 units across five regions with biome noise, towns, dungeons and boss arenas. Twelve quests drive progression alongside loot in five rarity tiers, levelling, and equipment that changes your stats. Every visual is drawn in code — characters, terrain, effects and UI are all rendered procedurally, and the sound effects are synthesised with the Web Audio API. No image files, no game engine, no libraries.",
+    highlights: [
+      "Five playable classes, each with four distinct abilities on cooldowns",
+      "Procedurally generated 2600×2600 world across five regions with biome noise",
+      "Twelve quests, four dungeons, four bosses, and a full loot system with five rarity tiers",
+      "Every sprite, tile and effect drawn procedurally in code — zero image assets",
+      "Sound effects synthesised at runtime with the Web Audio API",
+      "Built with no game engine and no third-party libraries",
+    ],
+    tags: ["JavaScript", "Canvas", "Game design", "Procedural art", "Web Audio"],
+    link: "https://night-saber.github.io/aetherfall/",
+    repo: "https://github.com/night-saber/aetherfall",
+  },
+
   /* -------------------------------------------------- the pre-AI foundation */
   {
     name: "Khan Academy — the whole Computer Programming curriculum",
