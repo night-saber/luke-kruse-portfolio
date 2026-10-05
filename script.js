@@ -11,18 +11,18 @@
 
 const TIMELINE = [
   {
-    era: "Elementary school — it starts",
-    period: "Before AI",
+    era: "5 August 2020 — the first project",
+    period: "Before AI · Age ~9",
     kind: "before",
-    body: "I started writing code in elementary school — years before AI could write it for me. No autocomplete, no chatbot, no \"just ask the model.\" Just Khan Academy's JavaScript and Processing lessons: loops, variables, conditionals, functions, and the slow thrill of making the computer do exactly what I pictured.",
-    tags: ["Khan Academy", "JavaScript", "Processing"],
+    body: "I joined Scratch and shared my first project, a drum machine, on 5 August 2020 — more than two years before ChatGPT existed, and years before any AI could write code for a kid. From there I built constantly: Slither.io Remix, Taco Shooter, Cat Climber, Mario Game, Platformer, Flappy Chicken, Maze, Taco Clicker, Endless Runner, Dungeon Jump, Zombie Apocalypse. Thirty-three projects across four years, every one built block by block, every bug found by hand.",
+    tags: ["Scratch", "33 projects", "2020–2024"],
   },
   {
-    era: "Building games on Scratch",
+    era: "Khan Academy — the lessons underneath",
     period: "Before AI",
     kind: "before",
-    body: "Scratch was where the lessons turned into games. Sprites, variables, broadcasts, clones, custom blocks — I learned how real systems fit together by building them: score counters, enemies, levels, game loops. Every bug was mine to find. That debugging instinct is still the most useful thing I own.",
-    tags: ["Scratch", "Game design", "Debugging"],
+    body: "Alongside Scratch, Khan Academy's JavaScript and Processing lessons taught me the fundamentals the slow way — loops, variables, conditionals, functions and animation, typed and debugged myself. No autocomplete, no chatbot, no \"just ask the model.\" Every concept landed because I had to build with it.",
+    tags: ["Khan Academy", "JavaScript", "Processing"],
   },
   {
     era: "Real engines, real code",
@@ -42,7 +42,7 @@ const TIMELINE = [
     era: "Building with AI — on purpose",
     period: "late 2026",
     kind: "after",
-    body: "By the time AI tools could write boilerplate, I already knew what good code looked like because I'd written it by hand for years. Now I use AI the way I'd use any power tool: I architect, direct and verify. Plugins with custom GUIs and 3D models, multi-agent AI living in a Minecraft world, a local AI music studio. The bottleneck is the idea, not the typing.",
+    body: "By the time AI tools could write boilerplate, I already knew what good code looked like because I'd written it by hand for six years. Now I use AI the way I'd use any power tool: I architect, direct and verify. Plugins with custom GUIs and 3D models, multi-agent AI living in a Minecraft world, a local AI music studio. The bottleneck is the idea, not the typing.",
     tags: ["Java", "Paper", "AI/ML", "Multi-agent"],
   },
 ];
@@ -64,18 +64,18 @@ const PROJECTS = [
     tags: ["JavaScript", "Processing", "Fundamentals"],
   },
   {
-    name: "Scratch — games, from scratch",
-    icon: "🐱", category: "Where I started", year: "Elementary school", featured: true,
-    era: "before", needsDetail: true,
-    blurb: "Games built block by block on Scratch: sprites, variables, broadcasts, clones and custom blocks. Score counters, enemies, levels and game loops — real systems, assembled by hand.",
-    body: "Scratch is where code became games. I learned how separate parts of a system talk to each other — broadcasts firing, clones multiplying, variables tracking state — by building scores, enemies, levels and loops and then watching them break in interesting ways. Block-based or not, the thinking is the same as any language: decompose the problem, build the smallest thing that works, then make it better. Every bug was mine to find, and finding them is still the skill I use most.",
+    name: "Scratch — 33 games, 2020–2024",
+    icon: "🐱", category: "Where I started", year: "Aug 2020 → 2024", featured: true,
+    era: "before",
+    blurb: "Four years of games built block by block on Scratch — 33 projects from Drum (Aug 2020) through Taco Shooter, Cat Climber, Mario Game, Platformer, Flappy Chicken, Maze, Taco Clicker, Endless Runner and Dungeon Jump. All before AI could write a line for me.",
+    body: "I joined Scratch on 5 August 2020 and kept building for four years — 33 shared projects, from a first drum machine to shooters, platformers, clickers and an endless runner. Scratch is where code became games: broadcasts firing, clones multiplying, variables tracking state, and custom blocks acting as real functions before I knew the word for abstraction. Score counters, enemies, levels and game loops — every one assembled by hand, every bug mine to find. I've listed the real projects and dates below; they're public on my Scratch profile.",
     highlights: [
-      "Built playable games with real game loops, scoring and levels",
-      "Learned event-driven thinking with broadcasts and clones",
-      "Made custom blocks — abstraction, before I knew the word for it",
-      "Debugged everything myself, by hand, with no AI assistance",
+      "33 projects over four years — started August 2020, years before AI coding tools",
+      "Real range: platformers, shooters, clickers, endless runners, a maze, a drum machine",
+      "Progressed from Drum (Aug 2020) to Dungeon Jump and Zombie Apocalypse (2022)",
+      "Every bug found and fixed by hand — no AI assistance existed for this",
     ],
-    tags: ["Scratch", "Game design", "Logic"],
+    tags: ["Scratch", "Game design", "4 years"],
   },
 
   /* -------------------------------------------------------- engines, pre-AI */
@@ -164,10 +164,10 @@ const prefersReduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 /* ------------------------------------------------------------------- hero */
 function renderStats() {
   const stats = [
-    { n: "10+", l: "Years coding" },
-    { n: "3", l: "Pre-AI platforms" },
+    { n: "6+", l: "Years coding" },
+    { n: "33", l: "Scratch projects" },
     { n: "5", l: "Game engines" },
-    { n: PROJECTS.length + "", l: "Projects here" },
+    { n: "2020", l: "Started building" },
   ];
   const wrap = $("#heroStats");
   stats.forEach((s) => {
@@ -337,6 +337,47 @@ function renderStack() {
   });
 }
 
+/* --------------------------------------------- scratch archive (real data) */
+const SCRATCH = [
+  { y: 2020, items: [
+    ["Drum", "Aug 2020"], ["Slither.io Remix", "Aug 2020"], ["food eater", "Sep 2020"],
+    ["Taco Shooter", "Oct 2020"], ["Cat Climer", "Dec 2020"] ] },
+  { y: 2021, items: [
+    ["Mario Game", "Feb 2021"], ["Platformer", "Mar 2021"], ["Flappy Chicken", "Mar 2021"],
+    ["Zombie Shooter", "Apr 2021"], ["shooter gun", "Apr 2021"], ["Maze", "May 2021"] ] },
+  { y: 2022, items: [
+    ["Scratch Platformer e10", "Feb 2022"], ["Taco Clicker!", "Feb 2022"],
+    ["Moving Shooter", "Feb 2022"], ["Endless Runner", "Feb 2022"],
+    ["Falling Spike Dodger", "Feb 2022"], ["Wall/Spike Dodger", "Feb 2022"],
+    ["Cat Clicker", "Feb 2022"], ["Dungeon Jump", "Mar 2022"],
+    ["Mobile Jumpy Chicken", "Mar 2022"], ["Zombie Apocalypse", "Sep 2022"] ] },
+  { y: "2023–24", items: [["Continued building", "2023–24"], ["33 projects total", "4 years"]] },
+];
+
+function renderArchive() {
+  const wrap = $("#archive");
+  if (!wrap) return;
+  wrap.innerHTML = "";
+  SCRATCH.forEach((grp) => {
+    const col = el("div", "arc-col reveal");
+    const head = el("div", "arc-head");
+    head.appendChild(el("span", "arc-year", String(grp.y)));
+    head.appendChild(el("span", "arc-count", grp.items.length + (typeof grp.y === "number" ? " projects" : "")));
+    col.appendChild(head);
+    const ul = el("ul", "arc-list");
+    grp.items.forEach(([title, date]) => {
+      const li = el("li");
+      li.appendChild(el("span", "arc-dot"));
+      const t = el("span", "arc-title", title);
+      li.appendChild(t);
+      li.appendChild(el("span", "arc-date", date));
+      ul.appendChild(li);
+    });
+    col.appendChild(ul);
+    wrap.appendChild(col);
+  });
+}
+
 /* -------------------------------------------------------------- particles */
 function initParticles() {
   const canvas = $("#particles");
@@ -391,6 +432,7 @@ function init() {
   renderFilters();
   renderGrid();
   renderTimeline();
+  renderArchive();
   renderInterests();
   renderStack();
   initParticles();
