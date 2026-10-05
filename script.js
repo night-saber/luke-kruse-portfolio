@@ -184,6 +184,7 @@ function renderStats() {
     ["First platforms", "Khan Academy · Scratch"],
     ["Coding before AI", "Yes — by years"],
     ["Primary languages", "JavaScript · Java · C#"],
+    ["Based in", "Solvang, California"],
     ["Off the clock", "Jiu jitsu · Math"],
   ];
   const fw = $("#facts");
