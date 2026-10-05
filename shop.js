@@ -98,4 +98,9 @@ function renderServices() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => { renderShop(); renderServices(); });
+function bootShop() { renderShop(); renderServices(); }
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", bootShop);
+} else {
+  bootShop();
+}
