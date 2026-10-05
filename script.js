@@ -11,18 +11,18 @@
 
 const TIMELINE = [
   {
-    era: "5 August 2020 — the first project",
+    era: "2019 — Khan Academy, the whole curriculum",
+    period: "Before AI",
+    kind: "before",
+    body: "In 2019 I worked through Khan Academy's entire Computer Programming curriculum — JavaScript and Processing, from drawing and animation through functions, loops, arrays and object-oriented design, into Advanced JS: Games & Visualizations and Natural Simulations. That last unit is where the maths clicked: random walks and probability distributions, Perlin noise, vector maths, Newton's laws of motion, gravity and friction, angular velocity, trigonometry, pendulums and particle systems. Typed and debugged myself. No autocomplete, no chatbot, no \"just ask the model.\"",
+    tags: ["Khan Academy", "JavaScript", "Math", "2019"],
+  },
+  {
+    era: "5 August 2020 — the first Scratch project",
     period: "Before AI · Age ~9",
     kind: "before",
     body: "I joined Scratch and shared my first project, a drum machine, on 5 August 2020 — more than two years before ChatGPT existed, and years before any AI could write code for a kid. From there I built constantly: Slither.io Remix, Taco Shooter, Cat Climber, Mario Game, Platformer, Flappy Chicken, Maze, Taco Clicker, Endless Runner, Dungeon Jump, Zombie Apocalypse. Thirty-three projects across four years, every one built block by block, every bug found by hand.",
     tags: ["Scratch", "33 projects", "2020–2024"],
-  },
-  {
-    era: "Khan Academy — the lessons underneath",
-    period: "Before AI",
-    kind: "before",
-    body: "Alongside Scratch, Khan Academy's JavaScript and Processing lessons taught me the fundamentals the slow way — loops, variables, conditionals, functions and animation, typed and debugged myself. No autocomplete, no chatbot, no \"just ask the model.\" Every concept landed because I had to build with it.",
-    tags: ["Khan Academy", "JavaScript", "Processing"],
   },
   {
     era: "Real engines, real code",
@@ -50,18 +50,19 @@ const TIMELINE = [
 const PROJECTS = [
   /* -------------------------------------------------- the pre-AI foundation */
   {
-    name: "Khan Academy — JavaScript & Processing",
-    icon: "∑", category: "Where I started", year: "Elementary school", featured: true,
-    era: "before", needsDetail: true,
-    blurb: "My first real programming: JavaScript and Processing sketches on Khan Academy, in elementary school — years before AI could write code for me. Loops, variables, conditionals, functions, animation and interaction, built line by line.",
-    body: "This is where I learned to program. Khan Academy's JavaScript and Processing environment taught me the fundamentals the hard way — by typing them, breaking them, and fixing them myself. No autocomplete, no chatbot, no \"just ask the model.\" Every concept landed because I had to build with it. The projects ranged from drawing and animation to small interactive sketches, and the habit that stuck was this: when it doesn't work, you read it until you find out why.",
+    name: "Khan Academy — the whole Computer Programming curriculum",
+    icon: "∑", category: "Where I started", year: "2019", featured: true,
+    era: "before",
+    blurb: "In 2019 I worked through Khan Academy's Computer Programming curriculum — JavaScript and Processing, from drawing and animation all the way to Natural Simulations: vectors, forces, Newton's laws, Perlin noise and particle systems.",
+    body: "This is where I learned to program — in 2019, three years before ChatGPT existed and long before AI could write code for a kid. Khan Academy's Computer Programming course taught me the fundamentals the hard way: typed, broken, and fixed myself. No autocomplete, no chatbot, no \"just ask the model.\" The curriculum ran from Intro to JS: Drawing & Animation (shapes, colour, variables, animation, interaction, functions, if-statements, loops, arrays, objects, object-oriented design) into the advanced units — Games & Visualizations, and Natural Simulations, which is where the maths really started: random walks and probability distributions, Perlin noise, vector maths, Newton's laws of motion, gravity and friction, angular velocity, trigonometry, oscillations and pendulums, and particle systems. That's the unit that made me love the maths behind code.",
     highlights: [
-      "Started programming in elementary school — before AI tooling existed for students",
-      "Learned core JavaScript fundamentals by writing them, not generating them",
-      "Built animated and interactive sketches in Processing",
-      "Developed the debugging habit that everything since has relied on",
+      "Completed Khan Academy's full Computer Programming curriculum in 2019 — years before AI coding tools",
+      "Intro to JS: Drawing & Animation — variables, functions, if-statements, loops, arrays, objects, OOP",
+      "Advanced JS: Games & Visualizations — interaction, collision and game logic",
+      "Advanced JS: Natural Simulations — vectors, forces, Newton's laws, Perlin noise, trigonometry, particle systems",
+      "Learned the maths behind the code: probability distributions, oscillation and angular movement",
     ],
-    tags: ["JavaScript", "Processing", "Fundamentals"],
+    tags: ["JavaScript", "Processing", "Math", "2019"],
   },
   {
     name: "Scratch — 33 games, 2020–2024",
@@ -164,10 +165,10 @@ const prefersReduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 /* ------------------------------------------------------------------- hero */
 function renderStats() {
   const stats = [
-    { n: "6+", l: "Years coding" },
+    { n: "2019", l: "Started coding" },
     { n: "33", l: "Scratch projects" },
     { n: "5", l: "Game engines" },
-    { n: "2020", l: "Started building" },
+    { n: "6+", l: "Years at it" },
   ];
   const wrap = $("#heroStats");
   stats.forEach((s) => {
