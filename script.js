@@ -172,6 +172,26 @@ const PROJECTS = [
     highlights: ["Java plugins for Paper with custom GUIs and 3D models", "Fabric modding and custom resource packs", "A 40+ enchant suite that ran under real players"],
     tags: ["Java", "Paper", "Fabric", "Skript"],
   },
+  {
+    name: "DualWieldAnything",
+    assisted: true,
+    icon: "\u2694\ufe0f", category: "Games", year: "2026",
+    blurb: "A Paper plugin that lets you dual-wield anything: swing with both hands, eat two foods at once, and block with a shield in each hand. The offhand weapon's own damage, enchantments and durability all apply.",
+    body: "Vanilla only swings the main hand, so a second weapon in the offhand is dead weight. This plugin changes that. Every attack also lands a scaled second hit from whatever the offhand holds - two axes, two swords, two tridents, a mace, or any item at all - with damage read from that item's own attack attribute, so a stick really does hurt less than a netherite axe. Fire Aspect ignites, Knockback pushes, Smite and Bane of Arthropods add their bonus damage, and the offhand item wears down and can break. Eating works the same way: hold food in both hands and you consume both, so one food fills hunger while the other supplies its effect, and sneak-right-click eats the offhand directly - something vanilla cannot do at all. Potions, milk and honey all resolve through the offhand too. Two shields reduce incoming damage by a further third and suppress knockback. Everything is driven from the events the server already fires rather than replacing vanilla behaviour, so it stays compatible with other combat plugins.",
+    highlights: [
+      "Offhand attacks with any item - axes, swords, tridents, maces, or anything at all",
+      "Damage read from the offhand item's own attack attribute, not a flat number",
+      "Offhand enchantments work: Fire Aspect, Knockback, Smite, Bane of Arthropods",
+      "Offhand durability is consumed per hit, with Unbreaking support",
+      "Eat two foods at once - hunger from one hand, effects from the other",
+      "Sneak-right-click to eat offhand food, which vanilla cannot do",
+      "Offhand potions, milk and honey apply their effects correctly",
+      "Two shields give a further 33% damage reduction and suppress knockback",
+      "Per-feature toggles and a damage multiplier in config.yml",
+    ],
+    tags: ["Java", "Paper", "Combat", "Plugin"],
+    repo: "https://github.com/night-saber/dual-wield-anything",
+  },
 ];
 
 const INTERESTS = [
