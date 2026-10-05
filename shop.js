@@ -1,3 +1,5 @@
+(function () {
+"use strict";
 /* Shop data + rendering for the portfolio storefront. */
 
 const PRODUCTS = [
@@ -104,3 +106,5 @@ if (document.readyState === "loading") {
 } else {
   bootShop();
 }
+
+})();
