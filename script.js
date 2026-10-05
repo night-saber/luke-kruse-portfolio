@@ -27,8 +27,8 @@ const TIMELINE = [
   {
     era: "Real engines, real code",
     period: "2025 – mid 2026",
-    kind: "before",
-    body: "I moved off block editors into typed languages and actual engines. EchoRouge in Unity with C# and the Universal Render Pipeline, then three Godot projects — a full platformer, a tile-based game, and a browser shooter. Documentation, error messages and stubbornness. Still no AI writing it for me.",
+    kind: "middle",
+    body: "I moved off block editors into typed languages and actual engines. EchoRouge in Unity with C# and the Universal Render Pipeline, then three Godot projects — a full platformer, a tile-based game, and a browser shooter. Documentation, error messages and stubbornness.",
     tags: ["Unity", "C#", "Godot", "GDScript"],
   },
   {
@@ -42,17 +42,93 @@ const TIMELINE = [
     era: "Building with AI — on purpose",
     period: "late 2026",
     kind: "after",
-    body: "By the time AI tools could write boilerplate, I already knew what good code looked like because I'd written it by hand for six years. Now I use AI the way I'd use any power tool: I architect, direct and verify. Plugins with custom GUIs and 3D models, multi-agent AI living in a Minecraft world, a local AI music studio. The bottleneck is the idea, not the typing.",
+    body: "By now AI tools could write boilerplate, and I already knew what good code looked like because I'd written it by hand for years. So I started using AI the way I'd use any power tool: I architect, direct and verify. Plugins with custom GUIs and 3D models, a landscaping app with crews and live translation, a browser RPG, a local AI music studio. The bottleneck is the idea, not the typing.",
     tags: ["Java", "Paper", "AI/ML", "Multi-agent"],
   },
 ];
 
 const PROJECTS = [
-  /* --------------------------------------------------------------- web apps */
+
+  /* where it started — the only pre-AI work */
+  {
+    name: "Khan Academy — the whole Computer Programming curriculum",
+    era: "before", featured: true,
+    icon: "∑", category: "Where I started", year: "2019",
+    blurb: "In 2019 I worked through Khan Academy's Computer Programming curriculum — JavaScript and Processing, from drawing and animation all the way to Natural Simulations: vectors, forces, Newton's laws, Perlin noise and particle systems.",
+    body: "This is where I learned to program — in 2019, three years before ChatGPT existed and long before AI could write code for a kid. Khan Academy's Computer Programming course taught me the fundamentals the hard way: typed, broken, and fixed myself. No autocomplete, no chatbot, no \"just ask the model.\" The curriculum ran from Intro to JS: Drawing & Animation (shapes, colour, variables, animation, interaction, functions, if-statements, loops, arrays, objects, object-oriented design) into the advanced units — Games & Visualizations, and Natural Simulations, which is where the maths really started: random walks and probability distributions, Perlin noise, vector maths, Newton's laws of motion, gravity and friction, angular velocity, trigonometry, oscillations and pendulums, and particle systems. That's the unit that made me love the maths behind code.",
+    highlights: [
+      "Completed Khan Academy's full Computer Programming curriculum in 2019 — years before AI coding tools",
+      "Intro to JS: Drawing & Animation — variables, functions, if-statements, loops, arrays, objects, OOP",
+      "Advanced JS: Games & Visualizations — interaction, collision and game logic",
+      "Advanced JS: Natural Simulations — vectors, forces, Newton's laws, Perlin noise, trigonometry, particle systems",
+      "Learned the maths behind the code: probability distributions, oscillation and angular movement",
+    ],
+    tags: ["JavaScript", "Processing", "Math", "2019"],
+  },
+  {
+    name: "Scratch — 33 games, 2020–2024",
+    era: "before", featured: true,
+    icon: "🐱", category: "Where I started", year: "Aug 2020 → 2024",
+    blurb: "Four years of games built block by block on Scratch — 33 projects from Drum (Aug 2020) through Taco Shooter, Cat Climber, Mario Game, Platformer, Flappy Chicken, Maze, Taco Clicker, Endless Runner and Dungeon Jump. All before AI could write a line for me.",
+    body: "I joined Scratch on 5 August 2020 and kept building for four years — 33 shared projects, from a first drum machine to shooters, platformers, clickers and an endless runner. Scratch is where code became games: broadcasts firing, clones multiplying, variables tracking state, and custom blocks acting as real functions before I knew the word for abstraction. Score counters, enemies, levels and game loops — every one assembled by hand, every bug mine to find. I've listed the real projects and dates below; they're public on my Scratch profile.",
+    highlights: [
+      "33 projects over four years — started August 2020, years before AI coding tools",
+      "Real range: platformers, shooters, clickers, endless runners, a maze, a drum machine",
+      "Progressed from Drum (Aug 2020) to Dungeon Jump and Zombie Apocalypse (2022)",
+      "Every bug found and fixed by hand — no AI assistance existed for this",
+    ],
+    tags: ["Scratch", "Game design", "4 years"],
+  },
+
+  /* games and apps I built myself */
+  {
+    name: "EchoRouge", icon: "🎮", category: "Games", year: "2025–26",
+    blurb: "A 2D game in Unity using the Universal Render Pipeline — input system, tilemaps, sprite animation and scene setup built from the ground up, written by hand in C#.",
+    body: "My first serious engine project, and my first typed language. I set up URP, wired the new Input System, built tilemap and sprite-animation pipelines, and assembled scenes by hand — learning C# and the engine together, the slow way. No AI wrote this; it's documentation, forum posts and a lot of red error text.",
+    highlights: ["Unity 6 with the Universal Render Pipeline", "New Input System and 2D animation pipelines", "Tilemap and sprite systems built by hand", "Written in C# — my first compiled language"],
+    tags: ["Unity", "C#", "URP", "2D"],
+  },
+  {
+    name: "First Game", icon: "👾", category: "Games", year: "2026",
+    blurb: "A complete Godot platformer: player controller, slimes, coins, kill zones, a game manager and music — exported to a standalone Windows build.",
+    body: "A finished, exported game, not a prototype. Movement, enemies, collectibles, death and respawn, a game manager tying it together, and music — all shipped as a standalone .exe. Finishing is a skill, and this is where I practised it.",
+    highlights: ["Full player controller and enemy AI", "Coins, kill zones and respawn logic", "Game manager and music system", "Exported standalone Windows build"],
+    tags: ["Godot", "GDScript", "Platformer"],
+  },
+  {
+    name: "Sproutails", icon: "🌱", category: "Games", year: "2026",
+    blurb: "A Godot game with custom tilesets, a player scene and input handling — a cosy, sprite-driven project.",
+    body: "A gentler project built around custom tilesets and a clean player scene — exploring tile-based world building, terrain rules and input architecture in Godot.",
+    highlights: ["Custom tileset with terrain rules", "Reusable player scene", "Input event architecture"],
+    tags: ["Godot", "GDScript", "Tilesets"],
+  },
+  {
+    name: "NeonShooter", icon: "🔫", category: "Games", year: "2026",
+    blurb: "A browser game built with plain HTML, CSS and JavaScript — no engine, no framework.",
+    body: "Sometimes the fastest way to understand something is to build it with nothing but the browser. NeonShooter is a canvas game written directly in JavaScript — the same language I started with on Khan Academy, years earlier.",
+    highlights: ["Pure HTML, CSS and JavaScript", "Canvas rendering and a hand-written game loop", "No engine, no dependencies"],
+    tags: ["JavaScript", "HTML5", "Canvas"],
+  },
+  {
+    name: "Voice Song Studio", icon: "🎙️", category: "Web & Apps", year: "2026",
+    blurb: "A self-hosted web app that renders an original song with your own voice on the lead — local MusicGen backing, singing synthesis and zero-shot voice cloning. No paid APIs.",
+    body: "Record or upload your voice, write lyrics, pick a style, and get a finished track with your timbre on the lead. A Next.js front end talks to a FastAPI backend that generates a backing track with MusicGen, synthesises a vocal melody, transfers your voice's spectral envelope onto it, then ducks, reverbs and limits the mix. The maths here is the fun part — it's signal processing end to end.",
+    highlights: ["Local MusicGen backing-track generation", "Formant singing synthesis from lyrics", "Zero-shot voice cloning from a recording", "Mastering chain: duck, reverb, limit, export"],
+    tags: ["Next.js", "FastAPI", "Python", "AI/ML"],
+  },
+  {
+    name: "Page2Sheet", icon: "📄", category: "Web & Apps", year: "2026",
+    blurb: "A Chrome extension (Manifest V3) that extracts text from any page, structures it with Gemini and downloads a clean CSV.",
+    body: "Grab any webpage, hand the text to Gemini with a structuring prompt, and get back a tidy CSV. Built on Manifest V3 with the scripting and storage APIs.",
+    highlights: ["Manifest V3 extension", "Gemini API for structuring", "One-click CSV export"],
+    tags: ["Chrome Extension", "JavaScript", "Gemini API"],
+  },
+
+  /* built with AI assistance */
   {
     name: "Verde — landscaping app for owners and gardeners",
-    icon: "🌿", category: "Web app", year: "2026", featured: true,
-    era: "now",
+    assisted: true,
+    icon: "🌿", category: "Web app", year: "2026",
     blurb: "A two-sided web app that connects land owners with gardeners. Owners photograph the exact thing they want changed and pin it to a map; workers get a job list with the photo, the instruction and the location.",
     body: "Landscaping jobs go wrong in a predictable way: the owner describes what they want in words, the worker pictures something different, and the disagreement only shows up once the work is done. Verde fixes that by making the request itself visual and located. Land owners add properties, post change requests with a photo of the problem, write what they want instead, and drop a pin on the exact spot. Workers see every property assigned to them, work through a task list, and upload completion photos as proof. The whole app runs with no backend and no build step — accounts, properties, tasks and photos live in the browser, with photos downscaled and JPEG-compressed to about 8 KB each so a full job history fits in local storage. The map is Leaflet with OpenStreetMap tiles (free, no API key) showing properties as pins, tasks as colour-coded circles by priority, and photos as tappable markers. Every account picks a primary language at signup from 17 options, and user-written content is translated automatically — so an English-speaking owner and a Spanish-speaking gardener each write in their own language and read the other in theirs.",
     highlights: [
@@ -71,8 +147,8 @@ const PROJECTS = [
   },
   {
     name: "Aetherfall — browser action RPG",
-    icon: "⚔", category: "Game", year: "2026", featured: true,
-    era: "now",
+    assisted: true,
+    icon: "⚔", category: "Game", year: "2026",
     blurb: "A complete action RPG in the browser: five classes with their own abilities, a procedurally generated world, twelve quests, four dungeons and four bosses. Every sprite, sound and line of code written from scratch — no engine, no assets, no dependencies.",
     body: "Aetherfall is a full action RPG that runs in a browser tab. There are five playable classes — Warden, Runeblade, Pyromancer, Druid and Shadowblade — each with four distinct abilities on cooldowns. The world is generated procedurally at 2600×2600 units across five regions with biome noise, towns, dungeons and boss arenas. Twelve quests drive progression alongside loot in five rarity tiers, levelling, and equipment that changes your stats. Every visual is drawn in code — characters, terrain, effects and UI are all rendered procedurally, and the sound effects are synthesised with the Web Audio API. No image files, no game engine, no libraries.",
     highlights: [
@@ -87,88 +163,10 @@ const PROJECTS = [
     link: "https://night-saber.github.io/aetherfall/",
     repo: "https://github.com/night-saber/aetherfall",
   },
-
-  /* -------------------------------------------------- the pre-AI foundation */
   {
-    name: "Khan Academy — the whole Computer Programming curriculum",
-    icon: "∑", category: "Where I started", year: "2019", featured: true,
-    era: "before",
-    blurb: "In 2019 I worked through Khan Academy's Computer Programming curriculum — JavaScript and Processing, from drawing and animation all the way to Natural Simulations: vectors, forces, Newton's laws, Perlin noise and particle systems.",
-    body: "This is where I learned to program — in 2019, three years before ChatGPT existed and long before AI could write code for a kid. Khan Academy's Computer Programming course taught me the fundamentals the hard way: typed, broken, and fixed myself. No autocomplete, no chatbot, no \"just ask the model.\" The curriculum ran from Intro to JS: Drawing & Animation (shapes, colour, variables, animation, interaction, functions, if-statements, loops, arrays, objects, object-oriented design) into the advanced units — Games & Visualizations, and Natural Simulations, which is where the maths really started: random walks and probability distributions, Perlin noise, vector maths, Newton's laws of motion, gravity and friction, angular velocity, trigonometry, oscillations and pendulums, and particle systems. That's the unit that made me love the maths behind code.",
-    highlights: [
-      "Completed Khan Academy's full Computer Programming curriculum in 2019 — years before AI coding tools",
-      "Intro to JS: Drawing & Animation — variables, functions, if-statements, loops, arrays, objects, OOP",
-      "Advanced JS: Games & Visualizations — interaction, collision and game logic",
-      "Advanced JS: Natural Simulations — vectors, forces, Newton's laws, Perlin noise, trigonometry, particle systems",
-      "Learned the maths behind the code: probability distributions, oscillation and angular movement",
-    ],
-    tags: ["JavaScript", "Processing", "Math", "2019"],
-  },
-  {
-    name: "Scratch — 33 games, 2020–2024",
-    icon: "🐱", category: "Where I started", year: "Aug 2020 → 2024", featured: true,
-    era: "before",
-    blurb: "Four years of games built block by block on Scratch — 33 projects from Drum (Aug 2020) through Taco Shooter, Cat Climber, Mario Game, Platformer, Flappy Chicken, Maze, Taco Clicker, Endless Runner and Dungeon Jump. All before AI could write a line for me.",
-    body: "I joined Scratch on 5 August 2020 and kept building for four years — 33 shared projects, from a first drum machine to shooters, platformers, clickers and an endless runner. Scratch is where code became games: broadcasts firing, clones multiplying, variables tracking state, and custom blocks acting as real functions before I knew the word for abstraction. Score counters, enemies, levels and game loops — every one assembled by hand, every bug mine to find. I've listed the real projects and dates below; they're public on my Scratch profile.",
-    highlights: [
-      "33 projects over four years — started August 2020, years before AI coding tools",
-      "Real range: platformers, shooters, clickers, endless runners, a maze, a drum machine",
-      "Progressed from Drum (Aug 2020) to Dungeon Jump and Zombie Apocalypse (2022)",
-      "Every bug found and fixed by hand — no AI assistance existed for this",
-    ],
-    tags: ["Scratch", "Game design", "4 years"],
-  },
-
-  /* -------------------------------------------------------- engines, pre-AI */
-  {
-    name: "EchoRouge", icon: "🎮", category: "Games", year: "2025–26", featured: true,
-    era: "before",
-    blurb: "A 2D game in Unity using the Universal Render Pipeline — input system, tilemaps, sprite animation and scene setup built from the ground up, written by hand in C#.",
-    body: "My first serious engine project, and my first typed language. I set up URP, wired the new Input System, built tilemap and sprite-animation pipelines, and assembled scenes by hand — learning C# and the engine together, the slow way. No AI wrote this; it's documentation, forum posts and a lot of red error text.",
-    highlights: ["Unity 6 with the Universal Render Pipeline", "New Input System and 2D animation pipelines", "Tilemap and sprite systems built by hand", "Written in C# — my first compiled language"],
-    tags: ["Unity", "C#", "URP", "2D"],
-  },
-  {
-    name: "First Game", icon: "👾", category: "Games", year: "2026", era: "before",
-    blurb: "A complete Godot platformer: player controller, slimes, coins, kill zones, a game manager and music — exported to a standalone Windows build.",
-    body: "A finished, exported game, not a prototype. Movement, enemies, collectibles, death and respawn, a game manager tying it together, and music — all shipped as a standalone .exe. Finishing is a skill, and this is where I practised it.",
-    highlights: ["Full player controller and enemy AI", "Coins, kill zones and respawn logic", "Game manager and music system", "Exported standalone Windows build"],
-    tags: ["Godot", "GDScript", "Platformer"],
-  },
-  {
-    name: "Sproutails", icon: "🌱", category: "Games", year: "2026", era: "before",
-    blurb: "A Godot game with custom tilesets, a player scene and input handling — a cosy, sprite-driven project.",
-    body: "A gentler project built around custom tilesets and a clean player scene — exploring tile-based world building, terrain rules and input architecture in Godot.",
-    highlights: ["Custom tileset with terrain rules", "Reusable player scene", "Input event architecture"],
-    tags: ["Godot", "GDScript", "Tilesets"],
-  },
-  {
-    name: "NeonShooter", icon: "🔫", category: "Games", year: "2026", era: "before",
-    blurb: "A browser game built with plain HTML, CSS and JavaScript — no engine, no framework.",
-    body: "Sometimes the fastest way to understand something is to build it with nothing but the browser. NeonShooter is a canvas game written directly in JavaScript — the same language I started with on Khan Academy, years earlier.",
-    highlights: ["Pure HTML, CSS and JavaScript", "Canvas rendering and a hand-written game loop", "No engine, no dependencies"],
-    tags: ["JavaScript", "HTML5", "Canvas"],
-  },
-
-  /* ------------------------------------------------------------------- web */
-  {
-    name: "Voice Song Studio", icon: "🎙️", category: "Web & Apps", year: "2026",
-    blurb: "A self-hosted web app that renders an original song with your own voice on the lead — local MusicGen backing, singing synthesis and zero-shot voice cloning. No paid APIs.",
-    body: "Record or upload your voice, write lyrics, pick a style, and get a finished track with your timbre on the lead. A Next.js front end talks to a FastAPI backend that generates a backing track with MusicGen, synthesises a vocal melody, transfers your voice's spectral envelope onto it, then ducks, reverbs and limits the mix. The maths here is the fun part — it's signal processing end to end.",
-    highlights: ["Local MusicGen backing-track generation", "Formant singing synthesis from lyrics", "Zero-shot voice cloning from a recording", "Mastering chain: duck, reverb, limit, export"],
-    tags: ["Next.js", "FastAPI", "Python", "AI/ML"],
-  },
-  {
-    name: "Page2Sheet", icon: "📄", category: "Web & Apps", year: "2026",
-    blurb: "A Chrome extension (Manifest V3) that extracts text from any page, structures it with Gemini and downloads a clean CSV.",
-    body: "Grab any webpage, hand the text to Gemini with a structuring prompt, and get back a tidy CSV. Built on Manifest V3 with the scripting and storage APIs.",
-    highlights: ["Manifest V3 extension", "Gemini API for structuring", "One-click CSV export"],
-    tags: ["Chrome Extension", "JavaScript", "Gemini API"],
-  },
-
-  /* ------------------------------------------- minecraft (deliberately brief) */
-  {
-    name: "Minecraft plugin work", icon: "⛏️", category: "Also", year: "2026",
+    name: "Minecraft plugin work",
+    assisted: true,
+    icon: "⛏️", category: "Also", year: "2026",
     blurb: "A smaller slice of my work: Java plugins for Paper (mech suits with abilities and 3D models, a 315-recipe item-fusion table, relic weapons), a Fabric backpack mod, and a 40+ enchantment Skript suite.",
     body: "I keep this brief on purpose — it's newer than the rest and I'd rather be judged on the decade of hand-written code that came first. Still, it's real shipped work: Paper plugins with custom GUIs, data components and hand-built 3D models; a Fabric mod; and a large Skript enchantment and upgrade suite that ran on live servers.",
     highlights: ["Java plugins for Paper with custom GUIs and 3D models", "Fabric modding and custom resource packs", "A 40+ enchant suite that ran under real players"],
@@ -292,8 +290,10 @@ function renderGrid() {
     const card = el("button", "card");
     card.type = "button";
     if (p.era === "before") card.classList.add("card-before");
+    if (p.assisted) card.classList.add("card-assisted");
     card.style.animation = prefersReduced ? "none" : `fade .4s ease ${i * 0.03}s both`;
-    if (p.featured) card.appendChild(el("span", "badge-featured", "Pre-AI"));
+    if (p.era === "before") card.appendChild(el("span", "badge-featured", "Pre-AI"));
+    else if (p.assisted) card.appendChild(el("span", "badge-assisted", "Built with AI"));
     const top = el("div", "card-top");
     top.appendChild(el("div", "card-icon", p.icon));
     top.appendChild(el("span", "tag", p.year));
