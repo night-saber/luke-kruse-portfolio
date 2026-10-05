@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Luke Kruse — Developer &amp; Creator</title>
+<meta name="description" content="Luke Kruse — builder of Minecraft plugins, mods, games and web apps. Portfolio of Java, Skript, Godot, Unity and full-stack projects." />
+<meta name="author" content="Luke Kruse" />
+<meta property="og:title" content="Luke Kruse — Developer & Creator" />
+<meta property="og:description" content="Minecraft plugins, mods, games and web apps." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<a class="skip" href="#work">Skip to work</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">LK</span>
+      <span class="brand-text">Luke Kruse</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#journey">Journey</a>
+      <a href="#about">About</a>
+      <a href="#stack">Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-ghost nav-cta" href="https://github.com/lukekruse" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Developer · Game Systems · Tools</p>
+      <h1 class="hero-title">
+        I build worlds, <span class="grad">weapons</span>, and the tools that make them.
+      </h1>
+      <p class="hero-sub">
+        Minecraft plugins and mods, custom resource packs, Godot and Unity games, and full-stack
+        web apps. Everything here I designed, coded, and shipped myself.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">See the work</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+      <ul class="hero-stats" id="heroStats"></ul>
+    </div>
+    <div class="hero-glow" aria-hidden="true"></div>
+  </section>
+
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <p>Filter by what you want to see. Every card is a real project from my machine.</p>
+      </div>
+      <div class="filters" id="filters" role="tablist" aria-label="Filter projects"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="journey">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>How I got here</h2>
+        <p>From Khan Academy sketches to multi-agent worlds — before AI, and with it.</p>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="about">
+    <div class="wrap about">
+      <div class="about-copy">
+        <h2>About</h2>
+        <p>
+          I'm Luke — an educator and builder from Oklahoma who spends his time making things work:
+          classrooms by day, code by night. I like systems that are deep enough to be interesting
+          and polished enough that other people actually want to use them.
+        </p>
+        <p>
+          Most of my work lives in the Minecraft ecosystem — Java plugins on Paper, Fabric mods,
+          Skript systems, and custom resource packs with hand-built 3D models. Outside of that I
+          build games in Godot and Unity, and web apps that run entirely on your own machine.
+        </p>
+        <p>
+          I care about the details: a weapon that <em>feels</em> different, a GUI that reads clearly,
+          a build that actually compiles and runs.
+        </p>
+      </div>
+      <aside class="about-card">
+        <h3>At a glance</h3>
+        <ul class="facts" id="facts"></ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="stack">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Stack &amp; tools</h2>
+        <p>What I reach for, grouped by what it's for.</p>
+      </div>
+      <div class="stack-grid" id="stackGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <div class="wrap contact">
+      <h2>Let's build something</h2>
+      <p class="contact-sub">
+        Open to collaborations, commissions, and questions about any project here.
+      </p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="https://github.com/lukekruse" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="mailto:hello@lukehitchkruse.com">Email</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© <span id="year"></span> Luke Kruse</span>
+    <span class="footer-dim">Built by hand — HTML, CSS, JS.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
