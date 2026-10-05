@@ -128,7 +128,7 @@ const PROJECTS = [
   {
     name: "Verde — landscaping app for owners and gardeners",
     assisted: true,
-    icon: "🌿", category: "Web app", year: "2026",
+    icon: "🌿", category: "Web & Apps", year: "2026",
     blurb: "A two-sided web app that connects land owners with gardeners. Owners photograph the exact thing they want changed and pin it to a map; workers get a job list with the photo, the instruction and the location.",
     body: "Landscaping jobs go wrong in a predictable way: the owner describes what they want in words, the worker pictures something different, and the disagreement only shows up once the work is done. Verde fixes that by making the request itself visual and located. Land owners add properties, post change requests with a photo of the problem, write what they want instead, and drop a pin on the exact spot. Workers see every property assigned to them, work through a task list, and upload completion photos as proof. The whole app runs with no backend and no build step — accounts, properties, tasks and photos live in the browser, with photos downscaled and JPEG-compressed to about 8 KB each so a full job history fits in local storage. The map is Leaflet with OpenStreetMap tiles (free, no API key) showing properties as pins, tasks as colour-coded circles by priority, and photos as tappable markers. Every account picks a primary language at signup from 17 options, and user-written content is translated automatically — so an English-speaking owner and a Spanish-speaking gardener each write in their own language and read the other in theirs.",
     highlights: [
@@ -148,7 +148,7 @@ const PROJECTS = [
   {
     name: "Aetherfall — browser action RPG",
     assisted: true,
-    icon: "⚔", category: "Game", year: "2026",
+    icon: "⚔", category: "Games", year: "2026",
     blurb: "A complete action RPG in the browser: five classes with their own abilities, a procedurally generated world, twelve quests, four dungeons and four bosses. Every sprite, sound and line of code written from scratch — no engine, no assets, no dependencies.",
     body: "Aetherfall is a full action RPG that runs in a browser tab. There are five playable classes — Warden, Runeblade, Pyromancer, Druid and Shadowblade — each with four distinct abilities on cooldowns. The world is generated procedurally at 2600×2600 units across five regions with biome noise, towns, dungeons and boss arenas. Twelve quests drive progression alongside loot in five rarity tiers, levelling, and equipment that changes your stats. Every visual is drawn in code — characters, terrain, effects and UI are all rendered procedurally, and the sound effects are synthesised with the Web Audio API. No image files, no game engine, no libraries.",
     highlights: [
@@ -166,9 +166,9 @@ const PROJECTS = [
   {
     name: "Minecraft plugin work",
     assisted: true,
-    icon: "⛏️", category: "Also", year: "2026",
-    blurb: "A smaller slice of my work: Java plugins for Paper (mech suits with abilities and 3D models, a 315-recipe item-fusion table, relic weapons), a Fabric backpack mod, and a 40+ enchantment Skript suite.",
-    body: "I keep this brief on purpose — it's newer than the rest and I'd rather be judged on the decade of hand-written code that came first. Still, it's real shipped work: Paper plugins with custom GUIs, data components and hand-built 3D models; a Fabric mod; and a large Skript enchantment and upgrade suite that ran on live servers.",
+    icon: "⛏️", category: "Games", year: "2026",
+    blurb: "Java plugins for Paper with custom GUIs and hand-built 3D models (mech suits with abilities, a 315-recipe item-fusion table, relic weapons), a Fabric backpack mod, and a 40+ enchantment Skript suite.",
+    body: "Modding taught me to ship code that other people actually run. Paper plugins with custom GUIs, data components and hand-built 3D models; a Fabric mod; and a large Skript enchantment and upgrade suite that stayed stable under real players on live servers. This is where I learned that \u201cworks on my machine\u201d is not the same as finished.",
     highlights: ["Java plugins for Paper with custom GUIs and 3D models", "Fabric modding and custom resource packs", "A 40+ enchant suite that ran under real players"],
     tags: ["Java", "Paper", "Fabric", "Skript"],
   },
